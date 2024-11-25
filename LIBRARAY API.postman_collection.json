@@ -1,0 +1,489 @@
+{
+	"info": {
+		"_postman_id": "05fb8c76-58fe-400e-902a-58788f8f934d",
+		"name": "LIBRARAY API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37174928"
+	},
+	"item": [
+		{
+			"name": "Get all books",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaQUlOQSIsImlhdCI6MTczMjUzMzYzMiwiZXhwIjoxNzMyNTY5NjMyfQ.gJJZ7IvUSGgx0pdUTSLgGcyuTh381RM9vmM8WkvpXj4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaQUlOQSIsImlhdCI6MTczMjUxNjU1MywiZXhwIjoxNzMyNTUyNTUzfQ.faklLljoejY5KhT4gDIfApwA8oCO4bcLrgkZoRRZjVQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"1950\",\r\n  \"author\": \"George Orwell\",\r\n  \"publicationYear\": 1950,\r\n  \"isbn\": \"9780451524935\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get book by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaQUlOQSIsImlhdCI6MTczMjUzMzYzMiwiZXhwIjoxNzMyNTY5NjMyfQ.gJJZ7IvUSGgx0pdUTSLgGcyuTh381RM9vmM8WkvpXj4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/books/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"ZAINA\",\r\n    \"password\":123456\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaQUlOQSIsImlhdCI6MTczMjUzMzYzMiwiZXhwIjoxNzMyNTY5NjMyfQ.gJJZ7IvUSGgx0pdUTSLgGcyuTh381RM9vmM8WkvpXj4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"1955\",\r\n  \"author\": \"George Orwell\",\r\n  \"publicationYear\": 1950,\r\n  \"isbn\": \"9780451524950\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/books/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaQUlOQSIsImlhdCI6MTczMjUzMzYzMiwiZXhwIjoxNzMyNTY5NjMyfQ.gJJZ7IvUSGgx0pdUTSLgGcyuTh381RM9vmM8WkvpXj4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/books/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all patrons",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaQUlOQSIsImlhdCI6MTczMjUzMzYzMiwiZXhwIjoxNzMyNTY5NjMyfQ.gJJZ7IvUSGgx0pdUTSLgGcyuTh381RM9vmM8WkvpXj4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/patrons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"patrons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get patron by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaQUlOQSIsImlhdCI6MTczMjUzMzYzMiwiZXhwIjoxNzMyNTY5NjMyfQ.gJJZ7IvUSGgx0pdUTSLgGcyuTh381RM9vmM8WkvpXj4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/patrons/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"patrons",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add patron",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaQUlOQSIsImlhdCI6MTczMjUzMzYzMiwiZXhwIjoxNzMyNTY5NjMyfQ.gJJZ7IvUSGgx0pdUTSLgGcyuTh381RM9vmM8WkvpXj4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Alice Brown\",\r\n  \"email\": \"alice.brown@example.com\",\r\n  \"phoneNumber\": \"+112233445544\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/patrons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"patrons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update patron",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaQUlOQSIsImlhdCI6MTczMjUzMzYzMiwiZXhwIjoxNzMyNTY5NjMyfQ.gJJZ7IvUSGgx0pdUTSLgGcyuTh381RM9vmM8WkvpXj4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Alice Brownies\",\r\n  \"email\": \"alice.brown@example.com\",\r\n  \"phoneNumber\": \"+112233445544\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/patrons/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"patrons",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete patron",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaQUlOQSIsImlhdCI6MTczMjUzMzYzMiwiZXhwIjoxNzMyNTY5NjMyfQ.gJJZ7IvUSGgx0pdUTSLgGcyuTh381RM9vmM8WkvpXj4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/patrons/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"patrons",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "borrow book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaQUlOQSIsImlhdCI6MTczMjUzMzYzMiwiZXhwIjoxNzMyNTY5NjMyfQ.gJJZ7IvUSGgx0pdUTSLgGcyuTh381RM9vmM8WkvpXj4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/borrow/1/patron/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"borrow",
+						"1",
+						"patron",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "return book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJaQUlOQSIsImlhdCI6MTczMjUzMzYzMiwiZXhwIjoxNzMyNTY5NjMyfQ.gJJZ7IvUSGgx0pdUTSLgGcyuTh381RM9vmM8WkvpXj4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/borrow/1/patron/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"borrow",
+						"1",
+						"patron",
+						"10"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "return book",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/return/1/patron/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"return",
+								"1",
+								"patron",
+								"1"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": [],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
